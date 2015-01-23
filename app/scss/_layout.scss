@@ -1,0 +1,83 @@
+
+//////////////////////////////// CUSTOM LAYOUT EXAMPLE////
+// http://foundation.zurb.com/docs/components/grid.html //
+/////////////////////////////////////////////////////////
+
+
+// Useful for creating wrapped <section> elements
+
+.wrap {
+	width:100%;
+	float:left;
+	clear:both;
+	
+	/*Demo styles*/
+	text-align:center;
+	background:#DCE4E4;
+	min-height:500px;
+}
+
+
+// Custom .container (grid row) examples
+
+.container { // create your custom row class name 
+
+	@include grid-row(); // use scss to inherit row behaviour
+
+	/*Demo styles*/
+	.main,
+	.item,
+	.sidebar {
+		min-height:500px;
+	}
+	
+	.main,
+	.item {
+		background:#FAFAFA;
+	}
+	
+	.sidebar {
+		background:$secondary-color;
+	}
+	
+	
+	
+	.main, .sidebar { 
+		@include grid-column(12); // mobile first, all columns full-width 
+	}
+	
+	.main {
+		@media #{$medium-up} {
+			@include grid-column(8); // medium(tablet) and above use 8 columns
+		}
+	}
+	
+	.main.full {
+			@include grid-column(12); // mobile first, always full-width 
+	}
+	
+	.sidebar {
+		@media #{$medium-up} {
+			@include grid-column(4); // medium(tablet) and above use 4 columns
+		}
+	}
+	
+	.nested {
+		@include grid-row($behavior: nest);
+	
+		/*Demo styles*/
+		.item {
+			@include grid-column(12);
+			text-align:center;
+			border:1px dotted;
+			margin-top:1em;
+			margin-bottom:1em;
+			
+			@media #{$medium-up} {
+				@include grid-column(4); // medium(tablet) and above use 4 columns
+			}
+		}
+	}
+	
+}
+
