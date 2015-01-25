@@ -26,10 +26,16 @@ Festures include
 
 Installation
 
-* Clone into your /localhost folder 
+* Clone/Fork into your /localhost folder 
 * Open your terminal at the path to your project folder
-* Make sure you have node and bower installed.
-* Run the command **npm install && bower install --save**
+* MAKE SURE YOU INSTALL NODE AND GRUNT GLOBALLY
+
+If you have not used these before have a read at his tutorial.
+
+http://mattbailey.io/a-beginners-guide-to-grunt-redux/
+
+
+* Access the root folder via temrinal and run the command **npm install && bower install --save**
 
 
 Grunt tasks:
