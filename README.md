@@ -32,8 +32,6 @@ Installation
 
 If you have not used these before have a read at his tutorial.
 
-http://mattbailey.io/a-beginners-guide-to-grunt-redux/
-
 
 * Access the root folder via temrinal and run the command **npm install && bower install --save**
 
